@@ -1,11 +1,18 @@
 body {
   background-color: #066c99;
-  color: #ffffff; 
+  color: #ffffff;
 }
 .jumbotron {
   background-color: #1086b9;
   color: #f3e3d4;
+  margin-top: 40px;
 }
-/*.container {
-  background-color: red;
-}*/
+.sidebar {
+  background-color: #1086b9;
+  float: left;
+  padding: 30px;
+  border-radius: 6px;
+}
+.resultContain {
+  float: right;
+}
