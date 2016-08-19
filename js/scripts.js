@@ -1,16 +1,20 @@
 var pingInsert = function(array1){
-  var pingPonged1 = array1.map(function(x) {
+  var pingPonged1 = [];
+  // debugger;
+  array1.forEach(function(x) {
+    // debugger;
     if ((x%5===0)&&(x%3===3)) {
-      pingPonged1 += "pingpong";
+      pingPonged1.push("pingpong");
     } else if (x%3===0) {
-      pingPonged1 += "ping";
+      pingPonged1.push("ping");
     } else if (x%5===0) {
-      pingPonged1 += "pong";
+      pingPonged1.push("pong");
     } else {
-      console.log("something");
+      pingPonged1.push(x);
     }
-    return pingPonged1;
   });
+  return pingPonged1;
+  console.log(pingPonged1);
 };
 
 
@@ -18,10 +22,12 @@ var pingInsert = function(array1){
 var countTo = function(num) {
   var inArray = [];
   for (i=0;i<=num;i++) {
-    inArray += i;
+    inArray.push(i);
   }
+  console.log(typeof inArray);
   console.log(inArray);
   var inArray2 = inArray.slice(1,num+1);
+  console.log(typeof inArray2);
   console.log(inArray2);
   var pingPonged2 = pingInsert(inArray2);
   console.log(pingPonged2);
@@ -32,7 +38,7 @@ var countTo = function(num) {
 $(document).ready(function(){
   $("form#input").submit(function(event) {
     event.preventDefault();
-    var lastNum = parseInt($("input#original").val());
+    var lastNum = $("input#original").val();
     if(lastNum){
       var result = countTo(lastNum);
       $("#output").text(result);
