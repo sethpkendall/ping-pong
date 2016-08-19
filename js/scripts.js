@@ -1,9 +1,7 @@
 var pingInsert = function(array1){
   var pingPonged1 = [];
-  // debugger;
   array1.forEach(function(x) {
-    // debugger;
-    if ((x%5===0)&&(x%3===3)) {
+    if ((x%5===0)&&(x%3===0)) {
       pingPonged1.push("pingpong");
     } else if (x%3===0) {
       pingPonged1.push("ping");
@@ -21,7 +19,7 @@ var pingInsert = function(array1){
 // Back end
 var countTo = function(num) {
   var inArray = [];
-  for (i=0;i<=num;i++) {
+  for (var i=0;i<=num;i++) {
     inArray.push(i);
   }
   console.log(typeof inArray);
@@ -41,7 +39,12 @@ $(document).ready(function(){
     var lastNum = $("input#original").val();
     if(lastNum){
       var result = countTo(lastNum);
-      $("#output").text(result);
+      for (var i=0;i<result.length;i++){
+        var node = document.createElement("li");
+        var textnode = document.createTextNode(result[i]);
+        node.appendChild(textnode);
+        document.getElementById("output").appendChild(node);
+      }
     } else {
       alert("Please enter a number!");
     }
