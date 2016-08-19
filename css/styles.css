@@ -2,16 +2,23 @@ body {
   background-color: #066c99;
   color: #ffffff;
 }
+a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+h1 {
+  font-family: serif;
+}
 .jumbotron {
   background-color: #1086b9;
   color: #f3e3d4;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .sidebar {
   background-color: #1086b9;
-  float: left;
   padding: 30px;
   border-radius: 6px;
+  margin-left: 70px;
 }
 .resultContain {
   float: right;
