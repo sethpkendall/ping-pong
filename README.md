@@ -12,6 +12,10 @@
   * Example Input: word
   * Example Output: null
 
+* It will not accept empty input.
+  * Example Input: ""
+  * Example Output: Alert: "Please enter a number!" 
+
 * For numbers divisible by 3, it inserts the word "ping" instead.
   * Example Input: 6
   * Example Output: [1, 2, ping, 4, 5, 6]

@@ -9,21 +9,26 @@
   </head>
   <body>
     <div class="container">
-      <h1>Test</h1>
-      <form id="input">
-        <div class="form-group">
-          <label for="original"></label>
-          <input id="original" class="form-control" type="number">
-        </div>
-        <button type="submit" class="btn btn-primary">Count the this</button>
-      </form>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-8">
-            <ul id="output">
-            </ul>
+      <div class="jumbotron">
+        <h1>Ping-Pong Counter</h1>
+        <h4>Welcome to the Ping-Pong Counter! When given a number this program will count up to the inputted number with some special insertions. These special insertions are:</h4>
+        <ul>
+          <li>"Ping" for numbers divisible by 3.</li>
+          <li>"Pong" for numbers divisible by 5.</li>
+          <li>"Ping-Pong" for numbers divisible by 15.</li>
+        </ul>
+        <h4>Please input a positive integer below.</h4>
+        <form id="input">
+          <div class="form-group">
+            <label for="original"></label>
+            <input id="original" class="form-control" type="number">
           </div>
-        </div>
+          <button type="submit" class="btn btn-default">Ping-Pong Count to this number!</button>
+        </form>
+      </div> <!-- END Jumbo -->
+      <div class="container">
+        <ul id="output">
+        </ul>
       </div>
     </div>
   </body>
