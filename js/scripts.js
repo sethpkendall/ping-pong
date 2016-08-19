@@ -39,6 +39,10 @@ $(document).ready(function(){
     var lastNum = $("input#original").val();
     if(lastNum){
       var result = countTo(lastNum);
+      var myNode = document.getElementById("output");
+      while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+      }
       for (var i=0;i<result.length;i++){
         var node = document.createElement("li");
         var textnode = document.createTextNode(result[i]);
